@@ -22,7 +22,12 @@ const student = {
 
 //2
 
-for (let key in student) {
+const studentInfoElement = document.getElementById('student-info');
+let message = 'Student information: <br>';
 
-    console.log(`${key}: ${student[key]}`);
+for (let key in student) {
+    
+   message += `${key}: ${student[key]}.<br>`;
 }
+
+studentInfoElement.innerHTML = message;
