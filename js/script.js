@@ -19,3 +19,10 @@ const student = {
     age: '5',
 }
  console.table(student);
+
+//2
+
+for (let key in student) {
+
+    console.log(`${key}: ${student[key]}`);
+}
