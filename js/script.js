@@ -40,25 +40,25 @@ studentInfoElement.innerHTML = message;
     {
         name: 'Charlie',
         surname: 'Brown',
-        age: 5,
+        age: '5',
     },
 
     {
         name: 'Patricia',
         surname: 'Reichardt',
-        age: 5,
+        age: '5',
     },
 
     {
         name: 'Linus',
         surname: 'Van Pelt',
-        age: 4,
+        age: '4',
     },
 
     {
         name: 'Lucy',
         surname: 'Van Pelt',
-        age: 6,
+        age: '6',
     },
  ];
 
@@ -93,7 +93,7 @@ const newStudent = {
 
 newStudent.name = prompt('Inserire il nome dello studente','Sally' ).trim();
 newStudent.surname = prompt('inserire il cognome dello studente','Brown').trim();
-newStudent.age = parseInt(prompt("Inserire l' età dello studente",'4').trim());
+newStudent.age = prompt("Inserire l' età dello studente",'4').trim();
 console.table(newStudent);
 
 studentsRecord.push(newStudent);
@@ -114,10 +114,11 @@ registrationButton.addEventListener('click', function() {
     
     registrationBox.style.display = 'none';
 
-    additionalStudent.name = document.getElementById('student-name').value;
-    additionalStudent.surname = document.getElementById('student-surname').value;
-    additionalStudent.age = parseInt(document.getElementById('student-age').value);
+    for (let key in student) {
     
+        additionalStudent[key] = document.getElementById(`student-${key}`).value;
+    }
+
     console.table(additionalStudent);
 
     studentsRecord.push(additionalStudent);
@@ -125,3 +126,4 @@ registrationButton.addEventListener('click', function() {
 
     successElement.innerText = 'Registrazione effettuata con successo';
 });
+
