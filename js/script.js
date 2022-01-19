@@ -31,3 +31,37 @@ for (let key in student) {
 }
 
 studentInfoElement.innerHTML = message;
+
+
+//3
+
+ const studentRecords  = 
+ [
+    {
+        name: 'Charlie',
+        surname: 'Brown',
+        age: '5',
+    },
+
+    {
+        name: 'Patricia',
+        surname: 'Reichardt',
+        age: '5',
+    },
+
+    {
+        name: 'Linus',
+        surname: 'Van Pelt',
+        age: '4',
+    },
+
+    {
+        name: 'Lucy',
+        surname: 'Van Pelt',
+        age: '6',
+    },
+ ];
+
+ console.table(studentRecords);
+
+ 
