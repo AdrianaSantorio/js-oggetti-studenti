@@ -16,7 +16,7 @@ console.log('JS OK');
 const student = {
     name: 'Charlie',
     surname: 'Brown',
-    age: '5',
+    age: 5,
 }
  console.table(student);
 
@@ -40,25 +40,25 @@ studentInfoElement.innerHTML = message;
     {
         name: 'Charlie',
         surname: 'Brown',
-        age: '5',
+        age: 5,
     },
 
     {
         name: 'Patricia',
         surname: 'Reichardt',
-        age: '5',
+        age: 5,
     },
 
     {
         name: 'Linus',
         surname: 'Van Pelt',
-        age: '4',
+        age: 4,
     },
 
     {
         name: 'Lucy',
         surname: 'Van Pelt',
-        age: '6',
+        age: 6,
     },
  ];
 
@@ -81,3 +81,21 @@ studentInfoElement.innerHTML = message;
  }
 
  studentsRecordElement.innerHTML = studentsRecordMessage;
+
+ //5 Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere all’array creato in precedenza, un nuovo oggetto studente inserendo nell’ ordine: nome, cognome e età.
+//ricevere le informazioni dall' utente
+//inserire le informazioni in un nuovo oggetto
+//inserire l' oggetto nell' array
+
+const newStudent = {
+
+};
+
+newStudent.name = prompt('Inserire il nome dello studente','Sally' ).trim();
+newStudent.surname = prompt('inserire il cognome dello studente','Brown').trim();
+newStudent.age = parseInt(prompt("Inserire l' età dello studente",'4').trim());
+console.table(newStudent);
+
+studentsRecord.push(newStudent);
+
+console.table(studentsRecord);
