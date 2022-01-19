@@ -73,7 +73,9 @@ studentInfoElement.innerHTML = message;
  for (let i = 0; i <studentsRecord.length; i++) { //ciclo relativo all' array
     
     for (let key in studentsRecord[i]) { //ciclo relativo all' oggetto
-        studentsRecordMessage += `${key}: ${studentsRecord[i][key]}.<br>`
+        if (key !== 'age') {
+            studentsRecordMessage += `${key}: ${studentsRecord[i][key]}.<br>`
+        }
      }
 
  }
