@@ -8,3 +8,14 @@ BONUS:
 Usiamo il DOM per stampare e chiedere le informazioni all'utente!
 
 */
+
+console.log('JS OK');
+
+//1
+
+const student = {
+    name: 'Charlie',
+    surname: 'Brown',
+    age: '5',
+}
+ console.table(student);
