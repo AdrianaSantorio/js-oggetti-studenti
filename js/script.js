@@ -99,3 +99,29 @@ console.table(newStudent);
 studentsRecord.push(newStudent);
 
 console.table(studentsRecord);
+
+//BONUS
+
+const additionalStudent = {
+
+};
+
+const registrationButton = document.getElementById('registration-button');
+const registrationBox = document.getElementById('registration-box');
+const successElement = document.getElementById('success');
+
+registrationButton.addEventListener('click', function() {
+    
+    registrationBox.style.display = 'none';
+
+    additionalStudent.name = document.getElementById('student-name').value;
+    additionalStudent.surname = document.getElementById('student-surname').value;
+    additionalStudent.age = parseInt(document.getElementById('student-age').value);
+    
+    console.table(additionalStudent);
+
+    studentsRecord.push(additionalStudent);
+    console.table(studentsRecord);
+
+    successElement.innerText = 'Registrazione effettuata con successo';
+});
