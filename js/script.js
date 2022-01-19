@@ -35,7 +35,7 @@ studentInfoElement.innerHTML = message;
 
 //3
 
- const studentRecords  = 
+ const studentsRecord  = 
  [
     {
         name: 'Charlie',
@@ -62,6 +62,20 @@ studentInfoElement.innerHTML = message;
     },
  ];
 
- console.table(studentRecords);
+ console.table(studentsRecord);
 
- 
+ //4
+
+ const studentsRecordElement = document.getElementById('students-record')
+
+ let studentsRecordMessage = 'Student information: <br>';
+
+ for (let i = 0; i <studentsRecord.length; i++) { //ciclo relativo all' array
+    
+    for (let key in studentsRecord[i]) { //ciclo relativo all' oggetto
+        studentsRecordMessage += `${key}: ${studentsRecord[i][key]}.<br>`
+     }
+
+ }
+
+ studentsRecordElement.innerHTML = studentsRecordMessage;
