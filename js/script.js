@@ -87,13 +87,18 @@ studentInfoElement.innerHTML = message;
 //inserire le informazioni in un nuovo oggetto
 //inserire l' oggetto nell' array
 
-const newStudent = {
 
+
+const name = prompt('Inserire il nome dello studente','Sally' ).trim();
+const surname = prompt('inserire il cognome dello studente','Brown').trim();
+const age = prompt("Inserire l' età dello studente",'4').trim();
+
+const newStudent = {
+    name: name,
+    surname: surname,
+    age: age,
 };
 
-newStudent.name = prompt('Inserire il nome dello studente','Sally' ).trim();
-newStudent.surname = prompt('inserire il cognome dello studente','Brown').trim();
-newStudent.age = prompt("Inserire l' età dello studente",'4').trim();
 console.table(newStudent);
 
 studentsRecord.push(newStudent);
@@ -101,11 +106,7 @@ studentsRecord.push(newStudent);
 console.table(studentsRecord);
 
 //BONUS
-
-const additionalStudent = {
-
-};
-
+ 
 const registrationButton = document.getElementById('registration-button');
 const registrationBox = document.getElementById('registration-box');
 const successElement = document.getElementById('success');
@@ -113,6 +114,10 @@ const successElement = document.getElementById('success');
 registrationButton.addEventListener('click', function() {
     
     registrationBox.style.display = 'none';
+
+    const additionalStudent = {
+
+    };
 
     for (let key in student) {
     
